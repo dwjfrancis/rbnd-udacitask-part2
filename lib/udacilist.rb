@@ -72,8 +72,9 @@ class UdaciList
   end
 
   def all
+    a = Artii::Base.new(font: 'small')
     puts "-".colorize(:red) * @title.length
-    puts @title.colorize(:blue)
+    puts a.asciify(@title).colorize(:blue)
     puts "-".colorize(:red) * @title.length
     @items.each_with_index do |item, position|
       puts "#{position + 1}) #{item.details}".colorize(:green)
@@ -84,12 +85,15 @@ class UdaciList
     puts "-".colorize(:red) * @title.length
     puts @title.colorize(:blue)
     puts "-".colorize(:red) * @title.length
-    index = 1
+    index = 0
     @items.each do |item|
       if(item.type == type)
-        puts "#{index}) #{item.details}".colorize(:green)
+        puts "#{index + 1}) #{item.details}".colorize(:green)
         index += 1
       end
     end    
+    if(index == 0)
+      puts "There are no elements of this type in this list."
+    end
   end
 end
