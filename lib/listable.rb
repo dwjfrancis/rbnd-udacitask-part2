@@ -14,10 +14,19 @@ module Listable
   end
 
   def format_priority(priority)
+    value = "invalid"
     value = " ⇧" if priority == "high"
     value = " ⇨" if priority == "medium"
     value = " ⇩" if priority == "low"
     value = "" if !priority
+#    if(@priority == "invalid")
+#      begin
+#        raise UdaciListErrors::InvalidPriorityValue, "InvalidPriorityValue #{priority} is not an acceptable value."
+#      rescue UdaciListErrors::InvalidPriorityValue => p
+#        puts p.message
+#      end
+#      @priority = ""
+#    end
     return value
   end
 
