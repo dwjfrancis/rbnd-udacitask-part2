@@ -44,7 +44,6 @@ class UdaciList
 
   def istype?
     if(@type == "todo") then isit =  true
-
     elsif(@type == "event")then isit =  true
     elsif(@type == "link")then isit = true
     else isit = false
@@ -82,8 +81,9 @@ class UdaciList
   end
 
   def filter(type)
+    a = Artii::Base.new(font: 'small')
     puts "-".colorize(:red) * @title.length
-    puts @title.colorize(:blue)
+    puts a.asciify(@title).colorize(:red)
     puts "-".colorize(:red) * @title.length
     index = 0
     @items.each do |item|
@@ -96,4 +96,9 @@ class UdaciList
       puts "There are no elements of this type in this list."
     end
   end
+
+  def remove_type(type)
+    @items.delete_if { |item| item.type == type }
+  end
+
 end

@@ -47,3 +47,6 @@ new_list.all
 # ------------------------
 new_list.filter("event")
 new_list.filter("noisey")
+
+new_list.remove_type("event")
+new_list.all
