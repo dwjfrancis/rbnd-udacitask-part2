@@ -14,6 +14,13 @@ in hours probably 12 to 16.
 2. What was the most rewarding challenge you conquered?
 Error messages and continual improvement on the style.  Hard to keep modules less than 11 lines and some are not less than 11 lines.
 3. What two additional features did you build? Why?
+***************
+Feature 2...  is a remove_task from the list.
+*************************
+Feature 1 is a dont_show
+ from the list.
+********************
+
 See part 1 question 2
 4. Where do you still have room to grow?
 have to get this course done soon as I am moving to Victoria and need to get it finished so I can start the Rails course.  I have to do more in the way of reducing my code to smaller calls but am rushed now.

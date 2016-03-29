@@ -76,7 +76,7 @@ class UdaciList
     puts a.asciify(@title).colorize(:blue)
     puts "-".colorize(:red) * @title.length
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}".colorize(:green)
+      puts "#{position + 1}) #{item.type} - #{item.details}".colorize(:green)
     end
   end
 
@@ -88,7 +88,7 @@ class UdaciList
     index = 0
     @items.each do |item|
       if(item.type == type)
-        puts "#{index + 1}) #{item.details}".colorize(:green)
+        puts "#{index + 1}) #{item.type} - #{item.details}".colorize(:green)
         index += 1
       end
     end    
@@ -101,4 +101,18 @@ class UdaciList
     @items.delete_if { |item| item.type == type }
   end
 
-end
+  def dont_show(type)
+    a = Artii::Base.new(font: 'small')
+    puts "-".colorize(:red) * @title.length
+    puts a.asciify(@title).colorize(:red)
+    puts "-".colorize(:red) * @title.length
+    index = 0
+    @items.each do |item|
+      if(item.type != type)
+        puts "#{index + 1}) #{item.type} - #{item.details}".colorize(:green)
+        index += 1
+      end
+    end
+  end
+
+end				

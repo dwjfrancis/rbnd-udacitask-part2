@@ -47,6 +47,8 @@ new_list.all
 # ------------------------
 new_list.filter("event")
 new_list.filter("noisey")
-
+#  extras  *********
+# dont_show does not show specifc types and remove_type removes types.
+new_list.dont_show("link")
 new_list.remove_type("event")
 new_list.all
