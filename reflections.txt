@@ -1,13 +1,21 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+I used actiify as it was handy and fit in the project.  I used it to make the titles more noticable.
+
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Feature 1...  was the filter of the list.
+  b) Feature 2...  is a remove_task from the list.
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+in hours probably 12 to 16.
 2. What was the most rewarding challenge you conquered?
+Error messages and continual improvement on the style.  Hard to keep modules less than 11 lines and some are not less than 11 lines.
 3. What two additional features did you build? Why?
+See part 1 question 2
 4. Where do you still have room to grow?
+have to get this course done soon as I am moving to Victoria and need to get it finished so I can start the Rails course.  I have to do more in the way of reducing my code to smaller calls but am rushed now.
+
+thanks
